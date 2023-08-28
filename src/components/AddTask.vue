@@ -1,16 +1,40 @@
 <script setup>
 import {reactive, ref} from "vue";
 import {useTaskStore} from "@/store/TaskStore";
+import Swal from 'sweetalert2'
 const taskStore = useTaskStore()
 const taskName = ref('')
 const createTask= ()=>{
-  let newTask= {
-    id: Date.now(),
-    name: taskName.value,
-    isDone: false
+  if (taskName.value !== ''){
+    let newTask= {
+      id: Date.now(),
+      name: taskName.value,
+      isDone: false
+    }
+    taskStore.addTask(newTask)
+    taskName.value = ''
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+    Toast.fire({
+      icon: 'success',
+      title: 'Task added successfully'
+    })
+  }else {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'PLease enter task name.',
+    })
   }
-  taskStore.addTask(newTask)
-  taskName.value = ''
 }
 </script>
 <template>
