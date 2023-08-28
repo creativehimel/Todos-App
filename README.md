@@ -2,7 +2,13 @@
 
 This repository contains a simple and elegant Todo List web app built using Tailwind CSS and JavaScript. The app allows users to create, manage, and save todos, all while enjoying a beautiful user interface design.
 
-## Recommended IDE Setup
+
+## Key Features
+* Add new todos with a user-friendly interface.
+* Mark todos as completed.
+* Delete completed todos or those no longer needed.
+* Change to-dos status
+* Filter to-dos by status
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
