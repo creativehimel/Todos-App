@@ -24,6 +24,7 @@ This repository contains a simple and elegant Todo List web app built using Tail
 * HTML5: The structure of the web app.
 * CSS3 with Tailwind CSS: For styling the app beautifully.
 * Vue Js: To handle the interactive functionality of the app.
+* Pinia for state management
 * Sweet Alert 2 for toast notification
 
 ### Compile and Hot-Reload for Development
