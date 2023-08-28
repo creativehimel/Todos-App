@@ -1,6 +1,6 @@
 # Simple Todo List Web App with Vue Js & Tailwind CSS
 
-This template should help get you started developing with Vue 3 in Vite.
+This repository contains a simple and elegant Todo List web app built using Tailwind CSS and JavaScript. The app allows users to create, manage, and save todos, all while enjoying a beautiful user interface design.
 
 ## Recommended IDE Setup
 
