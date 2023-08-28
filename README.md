@@ -1,4 +1,4 @@
-# To-Do App
+# Simple Todo List Web App with Vue Js & Tailwind CSS
 
 This template should help get you started developing with Vue 3 in Vite.
 
