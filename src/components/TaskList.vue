@@ -5,7 +5,7 @@ const taskList = useTaskStore()
 </script>
 
 <template>
-  <div class="flex border-b border-indigo-200 pb-3" v-for="task in taskList.tasks" :key="task.id">
+  <div class="flex border-b border-indigo-200 py-3" v-for="task in taskList.tasks" :key="task.id">
   <Task :task="task"/>
   </div>
 </template>

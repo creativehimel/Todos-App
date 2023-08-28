@@ -7,7 +7,7 @@ defineProps({
 <template>
   <label for="task" class="flex items-center">
     <input type="checkbox" :checked="task.isDone" id="task" class="h-5 w-5 text-indigo-500 rounded-sm border-indigo-500">
-    <span class="ml-2 text-gray-700">{{ task.name }}</span>
+    <span class="ml-2 text-gray-700" :class="task.isDone ? 'line-through' : ''">{{ task.name }}</span>
   </label>
   <button class="ml-auto text-red-500">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

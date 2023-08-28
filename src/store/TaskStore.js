@@ -28,5 +28,8 @@ export const useTaskStore = defineStore('task', ()=>{
             isDone: true
         }
     ])
-    return {tasks}
+    function addTask(newTask){
+       tasks.push(newTask)
+    }
+    return {tasks, addTask}
 })
