@@ -1,5 +1,5 @@
 import {defineStore} from "pinia";
-import {reactive} from "vue";
+import {reactive, ref} from "vue";
 export const useTaskStore = defineStore('task', {
     state: ()=>({
             tasks: [
@@ -28,9 +28,19 @@ export const useTaskStore = defineStore('task', {
                     name: 'Task 5',
                     isDone: true
                 }
-            ]
+            ],
+        sortable: 'all'
     }),
     getters: {
+        getFilterTaskList(){
+            if ('all' === this.sortable){
+                return this.tasks
+            }else if('completed' === this.sortable){
+                return this.tasks.filter(task=> task.isDone)
+            }else {
+                return this.tasks.filter(task=> !task.isDone)
+            }
+        },
         countAllTask(){
             return this.tasks.length
         },
