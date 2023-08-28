@@ -42,19 +42,25 @@ This repository contains a simple and elegant Todo List web app built using Tail
 - [Postcss](https://tailwindcss.com/docs/guides/vite#vue) .
 - [tailwindcss](https://tailwindcss.com/docs/guides/vite#vue) .
 - [Vite](https://vitejs.dev/) .
-
-## Project Setup
-
+## Getting Started
+To run the Todo List web app on your local machine, follow these steps:
+1. Clone the repository:
+ 
+```sh
+https://github.com/creativehimel/Todos-App.git
+```
+2. Install Node Module
+   
 ```sh
 npm install
 ```
-### Compile and Hot-Reload for Development
+3. Compile and Hot-Reload for Development
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+4. Compile and Minify for Production
 
 ```sh
 npm run build
