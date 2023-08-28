@@ -1,35 +1,57 @@
 import {defineStore} from "pinia";
-import {reactive, ref} from "vue";
-export const useTaskStore = defineStore('task', ()=>{
-    const tasks = reactive([
-        {
-            id: 1,
-            name: 'Task 1',
-            isDone: false
+import {reactive} from "vue";
+export const useTaskStore = defineStore('task', {
+    state: ()=>({
+            tasks: [
+                {
+                    id: 1,
+                    name: 'Task 1',
+                    isDone: false
+                },
+                {
+                    id: 2,
+                    name: 'Task 2',
+                    isDone: false
+                },
+                {
+                    id: 3,
+                    name: 'Task 3',
+                    isDone: true
+                },
+                {
+                    id: 4,
+                    name: 'Task 4',
+                    isDone: false
+                },
+                {
+                    id: 5,
+                    name: 'Task 5',
+                    isDone: true
+                }
+            ]
+    }),
+    getters: {
+        countAllTask(){
+            return this.tasks.length
         },
-        {
-            id: 2,
-            name: 'Task 2',
-            isDone: false
+        countCompletedTask(){
+            return this.tasks.filter(task=> task.isDone).length
         },
-        {
-            id: 3,
-            name: 'Task 3',
-            isDone: true
+        countPendingTask(){
+            return this.tasks.filter(task=> !task.isDone).length
         },
-        {
-            id: 4,
-            name: 'Task 4',
-            isDone: false
+    },
+    actions: {
+        addTask(newTask){
+            this.tasks.push(newTask)
         },
-        {
-            id: 5,
-            name: 'Task 5',
-            isDone: true
+        deleteTask(taskId){
+            this.tasks = this.tasks.filter(task=> task.id !== taskId)
+        },
+        handleToggle(taskId) {
+            const task = this.tasks.find(task=> task.id === taskId)
+            task.isDone = !task.isDone
         }
-    ])
-    function addTask(newTask){
-       tasks.push(newTask)
-    }
-    return {tasks, addTask}
-})
+        },
+
+    })

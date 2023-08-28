@@ -1,16 +1,16 @@
 <script setup>
-import {ref} from "vue";
+import {reactive, ref} from "vue";
 import {useTaskStore} from "@/store/TaskStore";
-const newTaskStore = useTaskStore()
-
+const taskStore = useTaskStore()
 const taskName = ref('')
-const createTask = ()=>{
-  let newTask = {
+const createTask= ()=>{
+  let newTask= {
     id: Date.now(),
     name: taskName.value,
     isDone: false
   }
-  newTaskStore.addTask(newTask)
+  taskStore.addTask(newTask)
+  taskName.value = ''
 }
 </script>
 <template>

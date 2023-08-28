@@ -3,8 +3,6 @@ import Header from "@/components/Header.vue";
 import AddTask from "@/components/AddTask.vue";
 import TaskList from "@/components/TaskList.vue";
 import FilterTask from "@/components/FilterTask.vue";
-import {useTaskStore} from "@/store/TaskStore";
-
 </script>
 
 <template>
