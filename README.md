@@ -5,22 +5,26 @@ This repository contains a simple and elegant Todo List web app built using Tail
 
 ## Key Features
 * Add new todos with a user-friendly interface.
+* Beautiful design and interface.
 * Mark todos as completed.
 * Delete completed todos or those no longer needed.
 * Change to-dos status
 * Filter to-dos by status
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Planned Features
+* Set task due Dates and Times.
+* Set priority for your tasks.
+* User registration.(Sign Up)
+* User login / social login (Google)
+* Filter to-dos by status
+* Task Tags
+* Dark Mode
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
+## Technologies Used
+* HTML5: The structure of the web app.
+* CSS3 with Tailwind CSS: For styling the app beautifully.
+* Vue Js: To handle the interactive functionality of the app.
+* Sweet Alert 2 for toast notification
 
 ### Compile and Hot-Reload for Development
 
