@@ -42,6 +42,12 @@ This repository contains a simple and elegant Todo List web app built using Tail
 - [Postcss](https://tailwindcss.com/docs/guides/vite#vue) .
 - [tailwindcss](https://tailwindcss.com/docs/guides/vite#vue) .
 - [Vite](https://vitejs.dev/) .
+
+## Project Setup
+
+```sh
+npm install
+```
 ### Compile and Hot-Reload for Development
 
 ```sh
