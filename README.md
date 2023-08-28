@@ -37,11 +37,11 @@ This repository contains a simple and elegant Todo List web app built using Tail
 - [Vue Sweet Alert 2](https://github.com/avil13/vue-sweetalert2) .
 
 #### Dev dependencies
-- [Vitejs/plugin-vue](https://vitejs.dev/guide/using-plugins.html#using-plugins)) .
-- [Autoprefixer] (https://tailwindcss.com/docs/guides/vite#vue) .
-- [Postcss] (https://tailwindcss.com/docs/guides/vite#vue) .
-- [tailwindcss] (https://tailwindcss.com/docs/guides/vite#vue) .
-- [Vite] (https://vitejs.dev/) .
+- [Vitejs/plugin-vue](https://vitejs.dev/guide/using-plugins.html#using-plugins) .
+- [Autoprefixer](https://tailwindcss.com/docs/guides/vite#vue) .
+- [Postcss](https://tailwindcss.com/docs/guides/vite#vue) .
+- [tailwindcss](https://tailwindcss.com/docs/guides/vite#vue) .
+- [Vite](https://vitejs.dev/) .
 ### Compile and Hot-Reload for Development
 
 ```sh
