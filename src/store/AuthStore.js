@@ -59,6 +59,7 @@ export const useAuthStore = defineStore('auth', {
             },
         logout(){
             this.isAuthenticated = false;
+            router.push('/login')
         }
         }
 
