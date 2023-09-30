@@ -1,5 +1,5 @@
 import {defineStore} from "pinia"
-import Swal from "sweetalert2";
+
 
 export const useTaskStore = defineStore('task', {
     state: ()=>({
@@ -30,7 +30,7 @@ export const useTaskStore = defineStore('task', {
                     isDone: true
                 }
             ],
-        sortable: 'all'
+        errorMsg: ''
     }),
     getters: {
         getFilterTaskList(){

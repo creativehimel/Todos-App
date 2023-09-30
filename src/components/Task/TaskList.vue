@@ -1,6 +1,6 @@
 <script setup>
 import {useTaskStore} from "@/store/TaskStore";
-import Task from "@/components/Task.vue";
+import Task from "@/components/Task/Task.vue";
 const taskList = useTaskStore()
 </script>
 
