@@ -52,7 +52,7 @@ const isActive = ref(false)
           <button v-if="authStore.isAuthenticated" @click="authStore.logout()" class="text-indigo-700 hover:text-white bg-white border-2 border-indigo-400 px-8 py-2 rounded text-sm font-medium tracking-wide hover:bg-indigo-600 transition-colors duration-300">
             <RouterLink to="/register">Logout</RouterLink>
           </button>
-          <button @click="isActive = !isActive">
+          <button @click="isActive = !isActive" class="md:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
             </svg>
