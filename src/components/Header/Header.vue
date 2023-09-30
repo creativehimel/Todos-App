@@ -26,12 +26,15 @@ const authStore = useAuthStore()
             <RouterLink to="/contact">Contact</RouterLink>
           </li>
         </ul>
-        <div class="space-x-3" v-if="!authStore.isAuthenticated">
-          <button class="text-white hover:text-indigo-700 border-2 border-indigo-400 hover:bg-white bg-indigo-500 px-8 py-2 rounded text-sm font-medium tracking-wide transition-colors duration-300">
+        <div class="space-x-3" >
+          <button v-if="!authStore.isAuthenticated" class="text-white hover:text-indigo-700 border-2 border-indigo-400 hover:bg-white bg-indigo-500 px-8 py-2 rounded text-sm font-medium tracking-wide transition-colors duration-300">
             <RouterLink to="/login">Login</RouterLink>
           </button>
-          <button class="text-indigo-700 hover:text-white bg-white border-2 border-indigo-400 px-8 py-2 rounded text-sm font-medium tracking-wide hover:bg-indigo-600 transition-colors duration-300">
+          <button v-if="!authStore.isAuthenticated" class="text-indigo-700 hover:text-white bg-white border-2 border-indigo-400 px-8 py-2 rounded text-sm font-medium tracking-wide hover:bg-indigo-600 transition-colors duration-300">
             <RouterLink to="/register">Register</RouterLink>
+          </button>
+          <button v-if="authStore.isAuthenticated" @click="authStore.logout()" class="text-indigo-700 hover:text-white bg-white border-2 border-indigo-400 px-8 py-2 rounded text-sm font-medium tracking-wide hover:bg-indigo-600 transition-colors duration-300">
+            <RouterLink to="/register">Logout</RouterLink>
           </button>
         </div>
       </nav>

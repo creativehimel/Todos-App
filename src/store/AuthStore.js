@@ -56,9 +56,10 @@ export const useAuthStore = defineStore('auth', {
                         text: 'Email or Password does not match',
                     })
                 }
-            }
-
-
+            },
+        logout(){
+            this.isAuthenticated = false;
+        }
         }
 
 })
